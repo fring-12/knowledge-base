@@ -35,6 +35,23 @@ JavaScript is continuously evolving, with regular updates (ES6, ESNext), and new
 
 ---
 
+## History of JavaScript
+
+JavaScript was developed by **Brendan Eich** in **1995** while he was working at **Netscape Communications Corporation**. Initially, it was called **Mocha**, then **LiveScript**, and finally, it was named **JavaScript**.
+
+### Key Milestones:
+- **1995**: JavaScript was created in just **10 days** to make web pages more interactive.
+- **1996**: JavaScript was standardized by **ECMA International** and became known as **ECMAScript**.
+- **1997**: The first edition of the ECMAScript specification was released.
+- **2009**: The release of **Node.js** allowed JavaScript to be used for server-side programming, making it a full-stack language.
+- **2015 (ES6/ECMAScript 2015)**: Introduced major updates like `let`, `const`, arrow functions, and classes, bringing modern features to the language.
+- **Present Day**: JavaScript continues to evolve, with new features being added regularly, making it one of the most flexible and widely-used programming languages.
+
+### Fun Fact:
+Despite its name, JavaScript is **not related** to Java. The name "JavaScript" was part of a marketing strategy to ride on the popularity of Java at the time.
+
+---
+
 ## 1. Introduction to JavaScript
 JavaScript is a scripting language used to make web pages interactive. It runs in the browser alongside HTML and CSS.
 
@@ -100,20 +117,60 @@ Example (Internal):
 
 
 ## 5. Data Types
+JavaScript supports several primitive data types and object types. Understanding these types is crucial as they define the kind of data you can store and manipulate in your programs.
 
-JavaScript supports several primitive data types including strings, numbers, booleans, and more.
+### Primitive Data Types:
 
-Example:
+1. **String**: A sequence of characters used for text.
+2. **Number**: Numeric values (integers or floats).
+3. **Boolean**: Logical values representing `true` or `false`.
+4. **Null**: Represents an intentional absence of any object value.
+5. **Undefined**: A variable that has been declared but has not yet been assigned a value.
+6. **BigInt**: Represents whole numbers larger than `Number.MAX_SAFE_INTEGER`.
+7. **Symbol**: A unique and immutable primitive value often used as object property keys.
 
-    let name = "Alice";   // String
-    let age = 22;         // Number
-    let isStudent = true; // Boolean
+### Object Types:
+- **Object**: A collection of properties, where each property consists of a key-value pair.
+- **Array**: A special type of object used to store ordered collections of values.
+- **Function**: A block of code designed to perform a particular task, also considered an object.
+
+### Examples:
+
+
+    // String
+    let name = "Alice";               // A string literal
+    let greeting = 'Hello, world!';    // Single quotes are also valid
+    console.log(typeof name);          // "string"
     
-    console.log(typeof name); // "string"
+    // Number
+    let age = 25;                      // An integer
+    let temperature = -5.3;            // A negative float
+    let largeNumber = 123e5;           // Exponential notation
+    console.log(typeof age);           // "number"
+    
+    // Boolean
+    let isStudent = true;              // Boolean true
+    let hasGraduated = false;          // Boolean false
+    console.log(typeof isStudent);     // "boolean"
+    
+    // Null
+    let car = null;                    // No value, explicitly set to null
+    console.log(typeof car);           // "object" (this is a quirk in JavaScript)
+    
+    // Undefined
+    let salary;                        // Variable declared but not defined
+    console.log(typeof salary);        // "undefined"
+    
+    // BigInt
+    let bigInteger = 1234567890123456789012345678901234567890n;
+    console.log(typeof bigInteger);    // "bigint"
+    
+    // Symbol
+    let uniqueID = Symbol('id');
+    let anotherID = Symbol('id');
+    console.log(uniqueID === anotherID); // false (each Symbol is unique)
+    console.log(typeof uniqueID);        // "symbol"
 
-### Exercise:
-
--   Ask students to declare a string, a number, and a boolean, then log their types using `typeof`.
 
 ## 6. Variables and Constants
 
