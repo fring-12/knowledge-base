@@ -188,22 +188,132 @@ Example:
 -   Ask students to declare variables with `let` and `const` and try reassigning values to them.
 
 ## 7. Operators
+Operators in JavaScript are used to perform operations on values and variables. They can be grouped into several categories: arithmetic, assignment, comparison, logical, bitwise, and more.
 
-JavaScript supports arithmetic, assignment, and comparison operators.
+### 1. Arithmetic Operators
+These operators perform basic mathematical operations.
 
-### Example:
+| Operator | Description              | Example        | Result |
+|----------|--------------------------|----------------|--------|
+| `+`      | Addition                 | `5 + 3`        | `8`    |
+| `-`      | Subtraction              | `5 - 3`        | `2`    |
+| `*`      | Multiplication           | `5 * 3`        | `15`   |
+| `/`      | Division                 | `15 / 3`       | `5`    |
+| `%`      | Modulus (remainder)      | `10 % 3`       | `1`    |
+| `++`     | Increment (adds 1)       | `let a = 5; a++` | `6`    |
+| `--`     | Decrement (subtracts 1)  | `let a = 5; a--` | `4`    |
 
-    let num1 = 8;
-    let num2 = 5;
+#### Example:
+
+    let x = 10;
+    let y = 3;
+    console.log(x + y);  // 13
+    console.log(x - y);  // 7
+    console.log(x * y);  // 30
+    console.log(x / y);  // 3.3333
+    console.log(x % y);  // 1
+
+### 2. Assignment Operators
+Assignment operators are used to assign values to variables.
+
+| Operator | Description              | Example         | Result         |
+|----------|--------------------------|-----------------|----------------|
+| `=`      | Assign                   | `x = 5`         | `x = 5`        |
+| `+=`     | Add and assign            | `x += 3`        | `x = x + 3` (8) |
+| `-=`     | Subtract and assign       | `x -= 2`        | `x = x - 2` (3) |
+| `*=`     | Multiply and assign       | `x *= 4`        | `x = x * 4` (20)|
+| `/=`     | Divide and assign         | `x /= 2`        | `x = x / 2` (10)|
+| `%=`     | Modulus and assign        | `x %= 2`        | `x = x % 2` (0) |
+
+### 3. Comparison Operators
+Comparison operators are used to compare two values and return a boolean (`true` or `false`).
+
+| Operator | Description                 | Example           | Result   |
+|----------|-----------------------------|-------------------|----------|
+| `==`     | Equal to                    | `5 == '5'`        | `true`   |
+| `===`    | Strict equal (value + type)  | `5 === '5'`       | `false`  |
+| `!=`     | Not equal                   | `5 != '5'`        | `false`  |
+| `!==`    | Strict not equal (value + type) | `5 !== '5'`    | `true`   |
+| `>`      | Greater than                | `10 > 5`          | `true`   |
+| `<`      | Less than                   | `10 < 5`          | `false`  |
+| `>=`     | Greater than or equal to    | `10 >= 10`        | `true`   |
+| `<=`     | Less than or equal to       | `5 <= 5`          | `true`   |
+
+
+### 4. Logical Operators
+Logical operators are used to combine multiple conditions and return a boolean value (`true` or `false`).
+
+| Operator | Description        | Example          | Result   |
+|----------|--------------------|------------------|----------|
+| `&&`     | Logical AND         | `true && false`  | `false`  |
+| `||`     | Logical OR          | `true || false`  | `true`   |
+| `!`      | Logical NOT         | `!true`          | `false`  |
+
+#### Example:
+
+    let isAdult = true;
+    let hasID = false;
     
-    console.log(num1 + num2);   // 13
-    console.log(num1 === num2); // false
+    console.log(isAdult && hasID);  // false (both conditions must be true)
+    console.log(isAdult || hasID);  // true (one condition is true)
+    console.log(!isAdult);          // false (negates the value)
+
+### 4. Logical Operators
+Logical operators are used to combine multiple conditions and return a boolean value (`true` or `false`).
+
+| Operator | Description        | Example          | Result   |
+|----------|--------------------|------------------|----------|
+| `&&`     | Logical AND         | `true && false`  | `false`  |
+| `||`     | Logical OR          | `true || false`  | `true`   |
+| `!`      | Logical NOT         | `!true`          | `false`  |
+
+#### Example:
+
+    let isAdult = true;
+    let hasID = false;
+    
+    console.log(isAdult && hasID);  // false (both conditions must be true)
+    console.log(isAdult || hasID);  // true (one condition is true)
+    console.log(!isAdult);          // false (negates the value)
 
  
+ ### 5. Bitwise Operators
+Bitwise operators operate on binary numbers at the bit level.
 
-### Exercise:
+| Operator | Description              | Example       | Result (Binary) |
+|----------|--------------------------|---------------|-----------------|
+| `&`      | AND                      | `5 & 1`       | `1`  (0101 & 0001 = 0001) |
+| `|`      | OR                       | `5 | 1`       | `5`  (0101 | 0001 = 0101) |
+| `^`      | XOR                      | `5 ^ 1`       | `4`  (0101 ^ 0001 = 0100) |
+| `~`      | NOT                      | `~5`          | `-6` (~0101 = 1010) |
+| `<<`     | Left shift               | `5 << 1`      | `10` (0101 << 1 = 1010) |
+| `>>`     | Right shift              | `5 >> 1`      | `2`  (0101 >> 1 = 0010) |
 
--   Create two variables and compare them using comparison operators.
+#### Example:
+
+    let a = 5; // Binary: 0101
+    let b = 1; // Binary: 0001
+    
+    console.log(a & b);  // 1 (AND)
+    console.log(a | b);  // 5 (OR)
+    console.log(a ^ b);  // 4 (XOR)
+    console.log(~a);     // -6 (NOT)
+    console.log(a << 1); // 10 (Left shift)
+    console.log(a >> 1); // 2  (Right shift)
+
+### 6. Ternary (Conditional) Operator
+The ternary operator is a shorthand for the `if...else` statement. It takes three operands: a condition, an expression to execute if the condition is `true`, and another expression to execute if the condition is `false`.
+
+| Syntax    | Description                       | Example                     | Result   |
+|-----------|-----------------------------------|-----------------------------|----------|
+| `? :`     | If condition is true or false     | `age >= 18 ? 'Adult' : 'Child'` | `Adult`  |
+
+#### Example:
+
+    let age = 20;
+    let status = (age >= 18) ? 'Adult' : 'Child';
+    
+    console.log(status); // Adult
 
 ----------
 
