@@ -683,6 +683,184 @@ Strings have built-in methods like `length`, `toUpperCase()`, `toLowerCase()`, `
     console.log(text.toUpperCase()); // "JAVASCRIPT IS FUN!"
     console.log(text.slice(0, 10));  // "JavaScript"
 
+### 1. **`length`**
+
+Returns the length of a string.
+
+    let str = "Hello, World!";
+    console.log(str.length); // 13
+
+### 2. **`toUpperCase()`**
+
+Converts a string to uppercase.
+
+    let str = "hello";
+    console.log(str.toUpperCase()); // "HELLO"
+
+### 3. **`toLowerCase()`**
+
+Converts a string to lowercase.
+
+    let str = "HELLO";
+    console.log(str.toLowerCase()); // "hello"
+
+### 4. **`charAt(index)`**
+
+Returns the character at the specified index.
+
+    let str = "Hello";
+    console.log(str.charAt(1)); // "e"
+
+### 5. **`charCodeAt(index)`**
+
+Returns the Unicode of the character at the specified index.
+
+    let str = "A";
+    console.log(str.charCodeAt(0)); // 65
+
+### 6. **`includes(substring)`**
+
+Checks if a string contains a specified substring. Returns `true` or `false`.
+
+    let str = "Hello, World!";
+    console.log(str.includes("World")); // true 
+
+### 7. **`indexOf(substring)`**
+
+Returns the index of the first occurrence of the specified substring.
+
+    let str = "Hello, World!";
+    console.log(str.indexOf("World")); // 7
+
+### 8. **`lastIndexOf(substring)`**
+
+Returns the index of the last occurrence of the specified substring.
+
+    let str = "Hello, World, World!";
+    console.log(str.lastIndexOf("World")); // 13
+
+### 9. **`slice(start, end)`**
+
+Extracts a part of a string and returns it as a new string.
+
+    let str = "Hello, World!";
+    console.log(str.slice(0, 5)); // "Hello"
+
+### 10. **`substring(start, end)`**
+
+Similar to `slice()`, but does not accept negative indices.
+
+    let str = "Hello, World!";
+    console.log(str.substring(0, 5)); // "Hello"
+
+### 11. **`substr(start, length)`**
+
+Extracts a substring starting from a specified index with a specified length.
+
+    let str = "Hello, World!";
+    console.log(str.substr(7, 5)); // "World"
+
+### 12. **`replace(searchValue, newValue)`**
+
+Replaces the first occurrence of the specified value with a new value.
+
+    let str = "Hello, World!";
+    console.log(str.replace("World", "JavaScript")); // "Hello, JavaScript!"
+
+### 13. **`replaceAll(searchValue, newValue)`**
+
+Replaces all occurrences of the specified value with a new value.
+
+    let str = "World, World!";
+    console.log(str.replaceAll("World", "JavaScript")); // "JavaScript, JavaScript!"
+
+### 14. **`split(separator)`**
+
+Splits a string into an array of substrings based on the specified separator.
+
+    let str = "Hello, World!";
+    let arr = str.split(", ");
+    console.log(arr); // ["Hello", "World!"]
+
+### 15. **`concat(...strings)`**
+
+Concatenates two or more strings.
+
+    let str1 = "Hello";
+    let str2 = "World";
+    console.log(str1.concat(", ", str2)); // "Hello, World"
+
+### 16. **`trim()`**
+
+Removes whitespace from both ends of a string.
+
+    let str = "  Hello, World!  ";
+    console.log(str.trim()); // "Hello, World!"
+
+### 17. **`trimStart()` (or `trimLeft()`)**
+
+Removes whitespace only from the beginning of the string.
+
+    let str = "  Hello, World!";
+    console.log(str.trimStart()); // "Hello, World!"
+
+### 18. **`trimEnd()` (or `trimRight()`)**
+
+Removes whitespace only from the end of the string.
+
+let str = "Hello, World!  ";
+console.log(str.trimEnd()); // "Hello, World!"
+
+### 19. **`startsWith(substring)`**
+
+Checks if a string starts with the specified substring.
+
+    let str = "Hello, World!";
+    console.log(str.startsWith("Hello")); // true
+
+### 20. **`endsWith(substring)`**
+
+Checks if a string ends with the specified substring.
+
+    let str = "Hello, World!";
+    console.log(str.endsWith("World!")); // true 
+
+### 21. **`repeat(count)`**
+
+Returns a new string with a specified number of copies of the original string.
+
+    let str = "Hello";
+    console.log(str.repeat(3)); // "HelloHelloHello"
+
+### 22. **`padStart(targetLength, padString)`**
+
+Pads the current string from the start with another string until it reaches the specified length.
+
+    let str = "5";
+    console.log(str.padStart(3, "0")); // "005"
+
+### 23. **`padEnd(targetLength, padString)`**
+
+Pads the current string from the end with another string until it reaches the specified length.
+
+    let str = "5";
+    console.log(str.padEnd(3, "0")); // "500"
+
+### 24. **`toString()`**
+
+Returns a string representing the specified object.
+
+    let num = 123;
+    console.log(num.toString()); // "123"
+
+### 25. **`valueOf()`**
+
+Returns the primitive value of a String object.
+
+    let strObj = new String("Hello");
+    console.log(strObj.valueOf()); // "Hello"
+
+
 ### Exercise:
 
 -   Create a string variable and use different string methods on it.
