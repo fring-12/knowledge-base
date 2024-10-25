@@ -162,11 +162,54 @@ JavaScript is a scripting language used to make web pages interactive. It runs i
     </html>
 
 
-    
+ ### Where to Write JavaScript in an HTML File
 
-### Exercise:
+JavaScript can be included in HTML in three main ways:
 
--   Ask students to change the text after clicking the button.
+#### 1. **Inline JavaScript**
+
+You can write JavaScript directly inside an HTML element’s attribute, such as in an event handler.
+
+    <button onclick="alert('Hello!')">Click Me</button> 
+
+#### 2. **Internal JavaScript**
+
+JavaScript can be written inside the `<script>` tag, either in the `<head>` or `<body>` section of the HTML file.
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <script> function showMessage() {
+          alert('Hello from internal JavaScript!');
+        } </script>
+    </head>
+    <body>
+      <button onclick="showMessage()">Click Me</button>
+    </body>
+    </html>
+
+#### 3. **External JavaScript**
+
+You can write JavaScript in a separate file (e.g., `script.js`) and link it to the HTML file using the `<script>` tag.
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <script src="script.js"></script>
+    </head>
+    <body>
+      <button onclick="showMessage()">Click Me</button>
+    </body>
+    </html>
+
+script.js:
+
+    function showMessage() {
+      alert('Hello from external JavaScript!');
+    }
+
+
+
 
 ## 2. JavaScript Syntax
 
@@ -192,27 +235,8 @@ JavaScript supports single-line and multi-line comments to improve code readabil
 
 -   Ask students to add comments explaining their code.
 
-## 4. Embedding JavaScript
 
-JavaScript can be embedded directly into an HTML file or referenced externally via a `.js` file.
-
-Example (Internal):
-
-    <!DOCTYPE html>
-     <html> 
-     <body> 
-	     <h2>Internal JavaScript</h2>
-	      <script> document.write("Hello from JavaScript!"); 
-	      </script> 
-	  </body> 
-      </html>
-
-### Exercise:
-
--   Use `document.write()` to print a sentence on the webpage.
-
-
-## 5. Data Types
+## 4. Data Types
 JavaScript supports several primitive data types and object types. Understanding these types is crucial as they define the kind of data you can store and manipulate in your programs.
 
 ### Primitive Data Types:
@@ -268,7 +292,7 @@ JavaScript supports several primitive data types and object types. Understanding
     console.log(typeof uniqueID);        // "symbol"
 
 
-## 6. Variables and Constants
+## 5. Variables and Constants
 
 JavaScript uses `let`, `const`, and `var` to declare variables. `let` and `const` are block-scoped, while `var` is function-scoped.
 
@@ -283,7 +307,7 @@ Example:
 
 -   Ask students to declare variables with `let` and `const` and try reassigning values to them.
 
-## 7. Operators
+## 6. Operators
 Operators in JavaScript are used to perform operations on values and variables. They can be grouped into several categories: arithmetic, assignment, comparison, logical, bitwise, and more.
 
 ### 1. Arithmetic Operators
@@ -413,7 +437,7 @@ The ternary operator is a shorthand for the `if...else` statement. It takes thre
 
 ----------
 
-## 8. Conditionals
+## 7. Conditionals
 
 Conditional statements (`if`, `else if`, `else`, `switch`) control program flow based on different conditions.
 
@@ -447,7 +471,7 @@ Conditional statements (`if`, `else if`, `else`, `switch`) control program flow 
 
 ----------
 
-## 9. Loops
+## 8. Loops
 
 Loops are used to execute a block of code repeatedly, based on a condition. There are three main types of loops in JavaScript: `for`, `while`, and `do...while`.
 
@@ -549,9 +573,8 @@ The `do...while` loop is similar to the `while` loop, but it guarantees that the
 
 ----------
 
-## 10. Functions
+## 9. Functions
 
-### 9. Functions
 Functions are reusable blocks of code that perform a specific task. They can take inputs, known as **parameters** or **arguments**, and can return a value. 
 
 #### Components of a Function:
@@ -609,7 +632,7 @@ Functions are reusable blocks of code that perform a specific task. They can tak
 
 ----------
 
-## 11. Arrays
+## 10. Arrays
 
 Arrays are used to store multiple values in a single variable.
 
@@ -625,7 +648,7 @@ Arrays are used to store multiple values in a single variable.
 
 ----------
 
-## 12. Basic DOM Manipulation
+## 11. Basic DOM Manipulation
 
 The Document Object Model (DOM) allows JavaScript to interact with HTML.
 
@@ -649,7 +672,7 @@ The Document Object Model (DOM) allows JavaScript to interact with HTML.
 
 ----------
 
-## 13. String Methods
+## 12. String Methods
 
 Strings have built-in methods like `length`, `toUpperCase()`, `toLowerCase()`, `slice()`, and `indexOf()`.
 
