@@ -307,7 +307,120 @@ Example:
 
 -   Ask students to declare variables with `let` and `const` and try reassigning values to them.
 
-## 6. Operators
+## 6. Object
+
+In JavaScript, an **object** is a collection of properties, where each property is defined by a **key** (or name) and a **value**. Objects allow us to group related data and functions together in a structured way. This is one of the most powerful features in JavaScript and is often used to represent real-world entities like products, users, etc.
+
+#### Example: Creating an Object
+
+Here's an example of a simple object representing a product:
+
+    const product = {
+      name: "Laptop",
+      price: 1000,
+      inStock: true,
+      category: "Electronics"
+    }; 
+
+-   **`name`** is the key (or property name), and `"Laptop"` is the value.
+-   **`price`** is the key, and `1000` is the value.
+-   **`inStock`** is the key, and `true` is the value (boolean).
+-   **`category`** is the key, and `"Electronics"` is the value.
+
+#### Accessing Object Properties
+
+You can access the values of an object’s properties using **dot notation** or **bracket notation**.
+
+    // Using dot notation
+    console.log(product.name);  // Output: Laptop
+    
+    // Using bracket notation
+    console.log(product["price"]);  // Output: 1000
+
+#### Modifying Object Properties
+
+To modify a property value, you simply assign a new value to the property using dot or bracket notation.
+
+##### Example: Changing a Property Value
+
+    // Changing the 'price' property using dot notation
+    product.price = 1200;
+    
+    // Changing the 'name' property using bracket notation
+    product["name"] = "Gaming Laptop";
+    
+    console.log(product);
+    // Output: { name: "Gaming Laptop", price: 1200, inStock: true, category: "Electronics" }
+
+#### Adding New Properties
+
+You can also add new properties to an object even after it has been created.
+
+    // Adding a new 'discount' property
+    product.discount = 0.1;  // 10% discount
+    
+    console.log(product.discount);  // Output: 0.1
+
+#### Deleting Properties
+
+You can remove a property from an object using the `delete` operator.
+
+    // Deleting the 'inStock' property
+    delete product.inStock;
+    
+    console.log(product.inStock);  // Output: undefined
+
+----------
+
+### Complete Example:
+
+Let’s say you have an object representing a car, and you want to change some of its values and add a new property:
+
+    const car = {
+      brand: "Toyota",
+      model: "Corolla",
+      year: 2021,
+      color: "blue"
+    };
+    
+    // Accessing properties
+    console.log(car.brand);  // Output: Toyota
+    console.log(car["model"]);  // Output: Corolla
+    
+    // Modifying existing properties
+    car.year = 2022;  // Changing year to 2022
+    car.color = "red";  // Changing color to red
+    
+    // Adding a new property
+    car.mileage = 15000;  // Adding mileage property
+    
+    console.log(car);
+    // Output:
+    // {
+    //   brand: "Toyota",
+    //   model: "Corolla",
+    //   year: 2022,
+    //   color: "red",
+    //   mileage: 15000
+    // }
+
+----------
+## 7. Arrays
+
+Arrays are used to store multiple values in a single variable.
+
+### Example:
+
+    let fruits = ["apple", "banana", "orange"];
+    console.log(fruits[0]); // "apple"
+    console.log(fruits.length); // 3
+
+### Exercise:
+
+-   Create an array of favorite foods and log each food using a loop.
+
+
+## 8. Operators
 Operators in JavaScript are used to perform operations on values and variables. They can be grouped into several categories: arithmetic, assignment, comparison, logical, bitwise, and more.
 
 ### 1. Arithmetic Operators
@@ -471,7 +584,7 @@ Conditional statements (`if`, `else if`, `else`, `switch`) control program flow 
 
 ----------
 
-## 8. Loops
+## 9. Loops
 
 Loops are used to execute a block of code repeatedly, based on a condition. There are three main types of loops in JavaScript: `for`, `while`, and `do...while`.
 
@@ -573,7 +686,7 @@ The `do...while` loop is similar to the `while` loop, but it guarantees that the
 
 ----------
 
-## 9. Functions
+## 10. Functions
 
 Functions are reusable blocks of code that perform a specific task. They can take inputs, known as **parameters** or **arguments**, and can return a value. 
 
@@ -628,23 +741,6 @@ Functions are reusable blocks of code that perform a specific task. They can tak
 ### Exercise:
 
 -   Write a function that takes two numbers as parameters and returns their multiplication.
-
-
-----------
-
-## 10. Arrays
-
-Arrays are used to store multiple values in a single variable.
-
-### Example:
-
-    let fruits = ["apple", "banana", "orange"];
-    console.log(fruits[0]); // "apple"
-    console.log(fruits.length); // 3
-
-### Exercise:
-
--   Create an array of favorite foods and log each food using a loop.
 
 ----------
 
