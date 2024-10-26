@@ -1,67 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Static Product Cards</title>
-  <style>
-    .card {
-      border: 1px solid #ddd;
-      padding: 16px;
-      margin: 10px;
-      border-radius: 8px;
-      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-      width: 200px;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .btn {
-      padding: 8px 16px;
-      background-color: #28a745;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background-color: #218838;
-    }
-  </style>
-</head>
-<body>
-  <h1>Product Cards</h1>
-  <div class="container">
-    <!-- Product Card 1 -->
-    <div class="card">
-      <h3>Laptop</h3>
-      <p><strong>Price:</strong> $1000</p>
-      <p><strong>Discounted Price:</strong> $900</p>
-      <p><strong>Description:</strong> A high-performance laptop.</p>
-      <p><strong>Stock:</strong> 5 units</p>
-      <button class="btn">Buy Now</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Product Cards</title>
+    <style>
+      .card {
+        border: 1px solid #ddd;
+        padding: 16px;
+        margin: 10px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .btn {
+        padding: 8px 16px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Product Cards</h1>
+    <div class="container" id="container">
+        
+        
     </div>
-
-    <!-- Product Card 2 -->
-    <div class="card">
-      <h3>Smartphone</h3>
-      <p><strong>Price:</strong> $500</p>
-      <p><strong>Discounted Price:</strong> $425</p>
-      <p><strong>Description:</strong> A latest model smartphone.</p>
-      <p><strong>Stock:</strong> 10 units</p>
-      <button class="btn">Buy Now</button>
-    </div>
-
-    <!-- Product Card 3 -->
-    <div class="card">
-      <h3>Headphones</h3>
-      <p><strong>Price:</strong> $100</p>
-      <p><strong>Discounted Price:</strong> $95</p>
-      <p><strong>Description:</strong> Noise-cancelling headphones.</p>
-      <p><strong>Stock:</strong> 8 units</p>
-      <button class="btn">Buy Now</button>
-    </div>
-  </div>
-</body>
+    <input type="number" id="input-text" onchange="sqr(this.value)" />
+    <div id="result"></div>
+    <script src="script.js"></script>
+    </script>
+  </body>
 </html>
