@@ -33,15 +33,13 @@ function renderProduct() {
 
       card.innerHTML = `<h3>${productValue.name}</h3>
               <p><strong>Price:</strong> ${productValue.price}</p>
-              <p><strong>Discounted Price:</strong> $900</p>
+                  <p><strong>Discounted Price:</strong> $900</p>
               <p><strong>Description:</strong> A high-performance laptop.</p>
               <p><strong>Stock:</strong> 5 units</p>
               <button class="btn">Buy Now</button>`;
       container.appendChild(card);
     }
   }
-
-  //   console.log(container);
 }
 
 renderProduct();
