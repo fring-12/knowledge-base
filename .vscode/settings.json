@@ -1,3 +1,8 @@
 {
+<<<<<<< HEAD
   "liveServer.settings.port": 5501
 }
+=======
+    "workbench.activityBar.orientation": "vertical"
+}
+>>>>>>> e49f842... new file added
