@@ -124,97 +124,7 @@ var sayGoodbye = function () {
 };
 ```
 
-## 3. Value Types and Reference Types
-
-### Value Types (Primitives)
-
-```javascript
-// Primitives are copied by value
-
-let a = 5;
-
-let b = a;
-
-a = 10;
-
-console.log(b); // Still 5
-
-// Primitive types
-
-let string = "Hello";
-
-let number = 42;
-
-let boolean = true;
-
-let nullValue = null;
-
-let undefinedValue = undefined;
-
-let symbol = Symbol("description");
-```
-
-### Reference Types
-
-```javascript
-// Objects are copied by reference
-
-let obj1 = { name: "John" };
-
-let obj2 = obj1;
-
-obj1.name = "Jane";
-
-console.log(obj2.name); // "Jane"
-
-// Arrays are reference types
-
-let arr1 = [1, 2, 3];
-
-let arr2 = arr1;
-
-arr1.push(4);
-
-console.log(arr2); // [1, 2, 3, 4]
-```
-
-## 4. Implicit and Explicit Coercion
-
-### Implicit Coercion
-
-```javascript
-// JavaScript automatically converts types
-
-console.log("5" + 2); // "52" (string)
-
-console.log("5" - 2); // 3 (number)
-
-console.log(true + 1); // 2
-
-console.log(false + 1); // 1
-
-console.log("5" == 5); // true
-```
-
-### Explicit Coercion
-
-```javascript
-// Deliberately converting types
-
-let str = String(123); // "123"
-
-let num = Number("123"); // 123
-
-let bool = Boolean(1); // true
-
-// Using parseInt/parseFloat
-
-let integer = parseInt("123.45"); // 123
-
-let float = parseFloat("123.45"); // 123.45
-```
-
-## 5. Scopes
+## 3. Scopes
 
 ### Function Scope
 
@@ -268,7 +178,131 @@ function outer() {
 }
 ```
 
-## 6. IIFE (Immediately Invoked Function Expression)
+## 4. Closures
+
+```javascript
+function createCounter() {
+  let count = 0; // This variable is "closed over"
+
+  return {
+    increment: function () {
+      count++;
+
+      return count;
+    },
+
+    decrement: function () {
+      count--;
+
+      return count;
+    },
+
+    getCount: function () {
+      return count;
+    },
+  };
+}
+
+const counter = createCounter();
+
+console.log(counter.increment()); // 1
+
+console.log(counter.increment()); // 2
+
+console.log(counter.decrement()); // 1
+```
+
+## 5. Value Types and Reference Types
+
+### Value Types (Primitives)
+
+```javascript
+// Primitives are copied by value
+
+let a = 5;
+
+let b = a;
+
+a = 10;
+
+console.log(b); // Still 5
+
+// Primitive types
+
+let string = "Hello";
+
+let number = 42;
+
+let boolean = true;
+
+let nullValue = null;
+
+let undefinedValue = undefined;
+
+let symbol = Symbol("description");
+```
+
+### Reference Types
+
+```javascript
+// Objects are copied by reference
+
+let obj1 = { name: "John" };
+
+let obj2 = obj1;
+
+obj1.name = "Jane";
+
+console.log(obj2.name); // "Jane"
+
+// Arrays are reference types
+
+let arr1 = [1, 2, 3];
+
+let arr2 = arr1;
+
+arr1.push(4);
+
+console.log(arr2); // [1, 2, 3, 4]
+```
+
+## 6. Implicit and Explicit Coercion
+
+### Implicit Coercion
+
+```javascript
+// JavaScript automatically converts types
+
+console.log("5" + 2); // "52" (string)
+
+console.log("5" - 2); // 3 (number)
+
+console.log(true + 1); // 2
+
+console.log(false + 1); // 1
+
+console.log("5" == 5); // true
+```
+
+### Explicit Coercion
+
+```javascript
+// Deliberately converting types
+
+let str = String(123); // "123"
+
+let num = Number("123"); // 123
+
+let bool = Boolean(1); // true
+
+// Using parseInt/parseFloat
+
+let integer = parseInt("123.45"); // 123
+
+let float = parseFloat("123.45"); // 123.45
+```
+
+## 7. IIFE (Immediately Invoked Function Expression)
 
 ```javascript
 // Standard IIFE
@@ -302,7 +336,7 @@ const counter = (function () {
 })();
 ```
 
-## 7. Object.create and Object.assign
+## 8. Object.create and Object.assign
 
 ### Object.create
 
@@ -338,7 +372,7 @@ console.log(result); // { a: 1, b: 3, c: 5, d: 6 }
 const clone = Object.assign({}, target);
 ```
 
-## 8. Array and String Methods
+## 9. Array and String Methods
 
 ### Array Methods
 
@@ -390,7 +424,7 @@ str.includes("World"); // true
 str.replace("World", "JavaScript"); // "Hello, JavaScript!"
 ```
 
-## 9. Pure Functions, Side Effects, and State Mutation
+## 10. Pure Functions, Side Effects, and State Mutation
 
 ### Pure Functions
 
@@ -440,7 +474,7 @@ original.name = "Jane";
 const modified = { ...original, name: "Jane" };
 ```
 
-## 10. Higher Order Functions
+## 11. Higher Order Functions
 
 ```javascript
 // Function that takes a function as argument
@@ -472,38 +506,4 @@ const triple = multiply(3);
 console.log(double(5)); // 10
 
 console.log(triple(5)); // 15
-```
-
-## 11. Closures
-
-```javascript
-function createCounter() {
-  let count = 0; // This variable is "closed over"
-
-  return {
-    increment: function () {
-      count++;
-
-      return count;
-    },
-
-    decrement: function () {
-      count--;
-
-      return count;
-    },
-
-    getCount: function () {
-      return count;
-    },
-  };
-}
-
-const counter = createCounter();
-
-console.log(counter.increment()); // 1
-
-console.log(counter.increment()); // 2
-
-console.log(counter.decrement()); // 1
 ```
