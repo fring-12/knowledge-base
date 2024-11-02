@@ -32,6 +32,8 @@ The JavaScript engine reads your code character by character, checking if it fol
 
 ### Execution Context
 
+ [TOOL](http://latentflip.com/loupe/?code=ZnVuY3Rpb24gdGVudGgoKSB7IH0KCmZ1bmN0aW9uIG5pbnRoKCkgeyB0ZW50aCgpIH0KCmZ1bmN0aW9uIGVpZ3RoKCkgeyBuaW50aCgpIH0KCmZ1bmN0aW9uIHNldmVudGgoKSB7IGVpZ3RoKCkgfQoKZnVuY3Rpb24gc2l4dGgoKSB7IHNldmVudGgoKSB9CgpmdW5jdGlvbiBmaWZ0aCgpIHsgc2l4dGgoKSB9CgpmdW5jdGlvbiBmb3VydGgoKSB7IGZpZnRoKCkgfQoKZnVuY3Rpb24gdGhpcmQoKSB7IGZvdXJ0aCgpIH0KCmZ1bmN0aW9uIHNlY29uZCgpIHsgdGhpcmQoKSB9CgpmdW5jdGlvbiBmaXJzdCgpIHsgc2Vjb25kKCkgfQoKZmlyc3QoKTs=!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4=)
+
 The environment where JavaScript code is executed. Contains:
 
 - Variable Environment
