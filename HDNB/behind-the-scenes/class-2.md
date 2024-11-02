@@ -1,4 +1,4 @@
-# JavaScript Core Concepts - Lecture Sheet
+# JavaScript Core Concepts - Class 2
 
 ## Table of Contents
 
@@ -6,23 +6,23 @@
 
 2. [Hoisting](#2-hoisting)
 
-3. [Value Types and Reference Types](#3-value-types-and-reference-types)
+3. [Scopes](#5-scopes)
 
-4. [Implicit and Explicit Coercion](#4-implicit-and-explicit-coercion)
+4. [Closures](#11-closures)
 
-5. [Scopes](#5-scopes)
+5. [Value Types and Reference Types](#3-value-types-and-reference-types)
 
-6. [IIFE](#6-iife-immediately-invoked-function-expression)
+6. [Implicit and Explicit Coercion](#4-implicit-and-explicit-coercion)
 
-7. [Object.create and Object.assign](#7-objectcreate-and-objectassign)
+7. [IIFE](#6-iife-immediately-invoked-function-expression)
 
-8. [Array and String Methods](#8-array-and-string-methods)
+8. [Object.create and Object.assign](#7-objectcreate-and-objectassign)
 
-9. [Pure Functions, Side Effects, and State Mutation](#9-pure-functions-side-effects-and-state-mutation)
+9. [Array and String Methods](#8-array-and-string-methods)
 
-10. [Higher Order Functions](#10-higher-order-functions)
+10. [Pure Functions, Side Effects, and State Mutation](#9-pure-functions-side-effects-and-state-mutation)
 
-11. [Closures](#11-closures)
+11. [Higher Order Functions](#10-higher-order-functions)
 
 ## 1. Syntax Parser, Execution Context, and Call Stack
 
@@ -506,57 +506,4 @@ console.log(counter.increment()); // 1
 console.log(counter.increment()); // 2
 
 console.log(counter.decrement()); // 1
-```
-
-## 12. Promises
-
-```javascript
-// Creating a promise
-
-const myPromise = new Promise((resolve, reject) => {
-  // Async operation
-
-  setTimeout(() => {
-    const random = Math.random();
-
-    if (random > 0.5) {
-      resolve("Success!");
-    } else {
-      reject("Failed!");
-    }
-  }, 1000);
-});
-
-// Using promises
-
-myPromise
-
-  .then((result) => {
-    console.log(result);
-  })
-
-  .catch((error) => {
-    console.error(error);
-  });
-
-// Async/await syntax
-
-async function fetchData() {
-  try {
-    const result = await myPromise;
-
-    console.log(result);
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-// Promise.all
-
-Promise.all([Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)])
-.then((values) => console.log(values)); // [1, 2, 3]
-```
-
-```
-
 ```
