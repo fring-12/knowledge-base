@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container"></div>
+        <h2>Post Manager</h2>
+        <div class="form-group">
+            <input type="text" id="postId" placeholder="Post ID (for update/delete)">
+            <input type="text" id="title" placeholder="Title">
+            <input type="text" id="body" placeholder="Body">
+            <input type="hidden" id="userId" value="1">
+        </div>
+        <div class="form-group">
+            <button onclick="createPost()">Create</button>
+            <button onclick="readPost()">Read</button>
+            <button onclick="updatePost()">Update</button>
+            <button onclick="deletePost()">Delete</button>
+        </div>
+        <div id="posts"></div>
+    </div>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
