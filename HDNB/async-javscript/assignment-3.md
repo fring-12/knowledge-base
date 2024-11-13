@@ -130,4 +130,5 @@
 
  
 
-## Submit Instructions: Just submit the html and js file in a zip file. you can do task all the task including 1-6 and 7 in one js file.
+## Submit Instruction:
+ Just submit the html and js file in a zip file. you can do task all the task including 1-6 and 7 in one js file.
