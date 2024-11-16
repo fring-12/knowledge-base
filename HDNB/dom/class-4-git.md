@@ -2,7 +2,8 @@
 
 ## 1. What is Git?
 - **Definition**: Git is a version control system (VCS) that helps track changes to files and collaborate on projects.
-- **Why Use Git?** 
+  
+**Why Use Git?** 
  - Keeps a history of changes.
  - Facilitates collaboration with teammates.
  - Allows reverting to previous versions of files.
