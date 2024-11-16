@@ -18,6 +18,15 @@
       bash
       git --version
 
+### Config Git
+
+Configure your Git user information (this will be tied to your commits):
+
+```
+  git config --global user.name "Your Name"
+  git config --global user.email "your-email@example.com"
+```
+
 ----------
 
 ## 3. Basic Git Workflow
