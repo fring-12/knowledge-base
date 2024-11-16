@@ -56,7 +56,7 @@ Visualized as:
 <script> document.getElementById("image").setAttribute("src", "new.jpg"); </script>`
 ```
 
-Changing Styles
+### Changing Styles
 
     const box = document.getElementById("container");
     box.style.color = "blue";
