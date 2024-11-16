@@ -157,32 +157,23 @@ console.log(byId, byClass, byTag);`
 
 ### Changing Text and HTML
 
-html
-
-Copy code
-
-`<p id="text">Old Text</p>
+```html
+<p id="text">Old Text</p>
 <script> document.getElementById("text").innerText = "New Text";
-  document.getElementById("text").innerHTML = "<b>Bold Text</b>"; </script>` 
-
+  document.getElementById("text").innerHTML = "<b>Bold Text</b>"; </script>
+```
 ### Changing Attributes
 
-html
 
-Copy code
-
-`<img id="image" src="old.jpg">
-<script> document.getElementById("image").setAttribute("src", "new.jpg"); </script>` 
-
+```html
+<img id="image" src="old.jpg">
+<script> document.getElementById("image").setAttribute("src", "new.jpg"); </script>
+```
 ### Changing Styles
 
-javascript
-
-Copy code
-
-`const box = document.getElementById("container");
-box.style.color = "blue";
-box.style.fontSize = "20px";` 
+    const box = document.getElementById("container");
+    box.style.color = "blue";
+    box.style.fontSize = "20px";
 
 ----------
 
@@ -190,24 +181,16 @@ box.style.fontSize = "20px";`
 
 ### Creating Elements
 
-javascript
-
-Copy code
-
-`const newElement = document.createElement("p");
-newElement.innerText = "This is a new paragraph!";
-document.body.appendChild(newElement);` 
+    const newElement = document.createElement("p");
+    newElement.innerText = "This is a new paragraph!";
+    document.body.appendChild(newElement);
 
 ### Inserting Before or After
 
-javascript
-
-Copy code
-
-`const container = document.getElementById("container");
-const newElement = document.createElement("div");
-newElement.innerText = "Inserted Element";
-document.body.insertBefore(newElement, container);` 
+    const container = document.getElementById("container");
+    const newElement = document.createElement("div");
+    newElement.innerText = "Inserted Element";
+    document.body.insertBefore(newElement, container);
 
 ----------
 
@@ -215,14 +198,10 @@ document.body.insertBefore(newElement, container);`
 
 ### Adding Events
 
-javascript
-
-Copy code
-
-`const button = document.getElementById("btn");
-button.addEventListener("click", function () {
-  alert("Button clicked!");
-});` 
+    const button = document.getElementById("btn");
+    button.addEventListener("click", function () {
+      alert("Button clicked!");
+    });
 
 ### Removing Events
 
