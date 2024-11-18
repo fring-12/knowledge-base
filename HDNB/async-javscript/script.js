@@ -7,18 +7,18 @@
 // 	console.log("Synchronous task complete.");
 // }
 
-// // Asynchronous function with Promise
+// Asynchronous function with Promise
 // function asyncTaskWithPromise() {
-// 	return new Promise((resolve) => {
-// 		console.log("Starting asynchronous task with promise...");
-// 		setTimeout(() => {
-// 			console.log("Async operation completed");
-// 			resolve("Asynchronous task complete.");
-// 		}, 2000); // 2 second delay
-// 	});
+//   return new Promise((resolve) => {
+//     console.log("Starting asynchronous task with promise...");
+//     setTimeout(() => {
+//       console.log("Async operation completed");
+//       resolve("Asynchronous task complete.");
+//     }, 4000); // 2 second delay
+//   });
 // }
 
-// // Demonstrating synchronous behavior
+// Demonstrating synchronous behavior
 // console.log("1. Calling synchronous function:");
 // syncFunction();
 // console.log("2. Synchronous function finished, moving to next line.\n");
@@ -27,7 +27,7 @@
 // console.log("3. Calling asynchronous function:");
 // asyncTaskWithPromise().then((result) => console.log("4.", result));
 // console.log(
-// 	"5. This line runs immediately while async function is still processing."
+//   "5. This line runs immediately while async function is still processing."
 // );
 
 // ############################################################
@@ -36,14 +36,18 @@
 // console.log("Starting...");
 
 // setTimeout(() => {
-// 	console.log("This message is delayed by 2 seconds.");
-// }, 2000);
+//   console.log("This message is delayed by 4 seconds.");
+// }, 4000);
 
 // console.log("Ending...");
 
 // function greet(name, message) {
-// 	console.log(`${message}, ${name}!`);
+//   console.log(`${message}, ${name}!`);
 // }
+
+// setInterval(() => {
+//   console.log("hello");
+// }, 3000);
 
 // // Using setTimeout
 // setTimeout(greet, 3000, "Alice", "Hello");
@@ -56,12 +60,12 @@
 // callbacks
 // synchronous callbacks
 // function syncGreet(name, callback) {
-// 	console.log(`Hello, ${name}`);
-// 	callback(); // Runs the callback immediately
+//   console.log(`Hello, ${name}`);
+//   callback(); // Runs the callback immediately
 // }
 
 // function sayGoodbye() {
-// 	console.log("Goodbye!");
+//   console.log("Goodbye!");
 // }
 
 // syncGreet("Alice", sayGoodbye);
@@ -70,12 +74,12 @@
 // // async callbacks
 
 // function asyncGreet(name, callback) {
-// 	console.log(`Hello, ${name}`);
-// 	setTimeout(callback, 2000); // Runs the callback after 2 seconds
+//   console.log(`Hello, ${name}`);
+//   setTimeout(callback, 2000); // Runs the callback after 2 seconds
 // }
 
 // function sayGoodbyeAsync() {
-// 	console.log("Goodbye!");
+//   console.log("Goodbye!");
 // }
 
 // asyncGreet("Bob", sayGoodbyeAsync);
@@ -121,42 +125,42 @@
 
 // // Promise to get tacos
 // function getTacos() {
-// 	return new Promise((resolve, reject) => {
-// 		console.log("Roommate goes to get tacos...");
+//   return new Promise((resolve, reject) => {
+//     console.log("Roommate goes to get tacos...");
 
-// 		setTimeout(() => {
-// 			const foodTruckAvailable = true; // Simulate food truck availability
+//     setTimeout(() => {
+//       const foodTruckAvailable = false; // Simulate food truck availability
 
-// 			if (foodTruckAvailable) {
-// 				resolve("Tacos are on the way!");
-// 			} else {
-// 				reject("Food truck is out of tacos. Let's cook pasta.");
-// 			}
-// 		}, 3000); // Simulate 3 seconds wait
-// 	});
+//       if (foodTruckAvailable) {
+//         resolve("Tacos are on the way!");
+//       } else {
+//         reject("Food truck is out of tacos. Let's cook pasta.");
+//       }
+//     }, 3000); // Simulate 3 seconds wait
+//   });
 // }
 
 // // Start preparing soup
 // console.log("Preparing soup...");
 
 // function prepareTable() {
-// 	console.log("Setting up the dining table...");
+//   console.log("Setting up the dining table...");
 // }
 
 // function preparePasta() {
-// 	console.log("Cooking pasta instead.");
+//   console.log("Cooking pasta instead.");
 // }
 
 // // Handle taco Promise
 // getTacos()
-// 	.then((message) => {
-// 		console.log(message); // If tacos are on the way, prepare the table
-// 		prepareTable();
-// 	})
-// 	.catch((error) => {
-// 		console.log(error); // If food truck is out of tacos, start cooking pasta
-// 		preparePasta();
-// 	});
+//   .then((message) => {
+//     console.log(message); // If tacos are on the way, prepare the table
+//     prepareTable();
+//   })
+//   .catch((error) => {
+//     console.log(error); // If food truck is out of tacos, start cooking pasta
+//     preparePasta();
+//   });
 
 // console.log("Soup preparation ongoing...");
 
@@ -250,12 +254,12 @@
 
 // async await
 // async function fetchData() {
-// 	console.log("Starting data fetch...");
+//   console.log("Starting data fetch...");
 
-// 	// This await will "pause" fetchData, but not the whole program
-// 	await new Promise((resolve) => setTimeout(resolve, 2000));
+//   // This await will "pause" fetchData, but not the whole program
+//   await new Promise((resolve) => setTimeout(resolve, 2000));
 
-// 	console.log("Data fetch complete.");
+//   console.log("Data fetch complete.");
 // }
 
 // console.log("Before fetching data");
@@ -269,136 +273,137 @@
 // GET example
 
 // fetch("https://jsonplaceholder.typicode.com/posts/1")
-// 	.then((response) => response.json())
-// 	.then((data) => console.log("Read:", data))
-// 	.catch((error) => console.error("Error:", error));
+//   .then((response) => response.json())
+//   .then((data) => console.log("Read:", data))
+//   .catch((error) => console.error("Error:", error));
 
 // POST example
 // fetch("https://jsonplaceholder.typicode.com/posts", {
-// 	method: "POST",
-// 	headers: { "Content-Type": "application/json" },
-// 	body: JSON.stringify({ title: "foo hdnb", body: "bar hdnb", userId: 1 })
+//   method: "POST",
+//   headers: { "Content-Type": "application/json" },
+//   body: JSON.stringify({
+//     title: "Andolon",
+//     body: "riskdhawalar andolon......",
+//     userId: 1,
+//   }),
 // })
-// 	.then((response) => response.json())
-// 	.then((data) => console.log("Created:", data))
-// 	.catch((error) => console.error("Error:", error));
+//   .then((response) => response.json())
+//   .then((data) => console.log("Created:", data))
+//   .catch((error) => console.error("Error:", error));
 
 // // PUT example (Update item with id 1)
 // fetch("https://jsonplaceholder.typicode.com/posts/1", {
-// 	method: "PUT",
-// 	headers: { "Content-Type": "application/json" },
-// 	body: JSON.stringify({
-// 		title: "updated title",
-// 		body: "updated body",
-// 		userId: 1
-// 	})
+//   method: "PUT",
+//   headers: { "Content-Type": "application/json" },
+//   body: JSON.stringify({
+//     title: "Andolon 2",
+//     body: "bia der andolon",
+//     userId: 1,
+//   }),
 // })
-// 	.then((response) => response.json())
-// 	.then((data) => console.log("Updated:", data))
-// 	.catch((error) => console.error("Error:", error));
+//   .then((response) => response.json())
+//   .then((data) => console.log("Updated:", data))
+//   .catch((error) => console.error("Error:", error));
 
-// // DELETE example (Delete item with id 1)
+// // // DELETE example (Delete item with id 1)
 // fetch("https://jsonplaceholder.typicode.com/posts/1", {
-// 	method: "DELETE"
+//   method: "DELETE",
 // })
-// 	.then(() => console.log("Deleted"))
-// 	.catch((error) => console.error("Error:", error));
+//   .then(() => console.log("Deleted"))
+//   .catch((error) => console.error("Error:", error));
 
 // ############################################################
 
-// async function createPost() {
-// 	const title = document.getElementById("title").value;
-// 	const body = document.getElementById("body").value;
-// 	const userId = document.getElementById("userId").value;
+async function createPost() {
+  const title = document.getElementById("title").value;
+  const body = document.getElementById("body").value;
+  const userId = document.getElementById("userId").value;
 
-// 	try {
-// 		const response = await fetch(
-// 			"https://jsonplaceholder.typicode.com/posts",
-// 			{
-// 				method: "POST",
-// 				headers: { "Content-Type": "application/json" },
-// 				body: JSON.stringify({ title, body, userId })
-// 			}
-// 		);
-// 		const data = await response.json();
-// 		displayPosts([data]);
-// 	} catch (error) {
-// 		console.error("Error:", error);
-// 	}
-// }
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ title, body, userId }),
+    });
+    const data = await response.json();
+    displayPosts([data]);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
 
-// async function readPost() {
-// 	const postId = document.getElementById("postId").value;
-// 	const url = postId
-// 		? `https://jsonplaceholder.typicode.com/posts/${postId}`
-// 		: "https://jsonplaceholder.typicode.com/posts";
+async function readPost() {
+  const postId = document.getElementById("postId").value;
+  const url = postId
+    ? `https://jsonplaceholder.typicode.com/posts/${postId}`
+    : "https://jsonplaceholder.typicode.com/posts";
 
-// 	try {
-// 		const response = await fetch(url);
-// 		const data = await response.json();
-// 		displayPosts(Array.isArray(data) ? data : [data]);
-// 	} catch (error) {
-// 		console.error("Error:", error);
-// 	}
-// }
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    displayPosts(Array.isArray(data) ? data : [data]);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
 
-// async function updatePost() {
-// 	const postId = document.getElementById("postId").value;
-// 	const title = document.getElementById("title").value;
-// 	const body = document.getElementById("body").value;
-// 	const userId = document.getElementById("userId").value;
+async function updatePost() {
+  const postId = document.getElementById("postId").value;
+  const title = document.getElementById("title").value;
+  const body = document.getElementById("body").value;
+  const userId = document.getElementById("userId").value;
 
-// 	if (!postId) {
-// 		alert("Please enter a Post ID to update");
-// 		return;
-// 	}
+  if (!postId) {
+    alert("Please enter a Post ID to update");
+    return;
+  }
 
-// 	try {
-// 		const response = await fetch(
-// 			`https://jsonplaceholder.typicode.com/posts/${postId}`,
-// 			{
-// 				method: "PUT",
-// 				headers: { "Content-Type": "application/json" },
-// 				body: JSON.stringify({ title, body, userId })
-// 			}
-// 		);
-// 		const data = await response.json();
-// 		displayPosts([data]);
-// 	} catch (error) {
-// 		console.error("Error:", error);
-// 	}
-// }
+  try {
+    const response = await fetch(
+      `https://jsonplaceholder.typicode.com/posts/${postId}`,
+      {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title, body, userId }),
+      }
+    );
+    const data = await response.json();
+    displayPosts([data]);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
 
-// async function deletePost() {
-// 	const postId = document.getElementById("postId").value;
+async function deletePost() {
+  const postId = document.getElementById("postId").value;
 
-// 	if (!postId) {
-// 		alert("Please enter a Post ID to delete");
-// 		return;
-// 	}
+  if (!postId) {
+    alert("Please enter a Post ID to delete");
+    return;
+  }
 
-// 	try {
-// 		await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {
-// 			method: "DELETE"
-// 		});
-// 		document.getElementById("posts").innerHTML =
-// 			"<p>Post deleted successfully!</p>";
-// 	} catch (error) {
-// 		console.error("Error:", error);
-// 	}
-// }
+  try {
+    await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {
+      method: "DELETE",
+    });
+    document.getElementById("posts").innerHTML =
+      "<p>Post deleted successfully!</p>";
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
 
-// function displayPosts(posts) {
-// 	const postsDiv = document.getElementById("posts");
-// 	postsDiv.innerHTML = posts
-// 		.map(
-// 			(post) => `
-//         <div class="post-item">
-//             <h3>${post.title}</h3>
-//             <p>${post.body}</p>
-//             <small>Post ID: ${post.id}, User ID: ${post.userId}</small>
-//         </div>
-//     `
-// 		)
-// 		.join("");
-// }
+function displayPosts(posts) {
+  const postsDiv = document.getElementById("posts");
+  postsDiv.innerHTML = posts
+    .map(
+      (post) => `
+        <div class="post-item">
+            <h3>${post.title}</h3>
+            <p>${post.body}</p>
+            <small>Post ID: ${post.id}, User ID: ${post.userId}</small>
+        </div>
+    `
+    )
+    .join("");
+}

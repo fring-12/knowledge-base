@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="faq">
+        <div>
+          <h3 class="question">What is DOM?</h3>
+          <p class="answer" style="display: none;">DOM stands for Document Object Model.</p>
+        </div>
+        <div>
+          <h3 class="question">What is JavaScript?</h3>
+          <p class="answer" style="display: none;">JavaScript is a programming language for the web.</p>
+        </div>
+      </div>
+      <script>
+        document.querySelectorAll('.question').forEach(question => {
+          question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+          });
+        });
+      </script>
+      
+</body>
+</html>
